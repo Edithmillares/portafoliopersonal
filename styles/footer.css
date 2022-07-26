@@ -1,0 +1,42 @@
+/* css del footer */
+.footer{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container_links_footer{
+    padding: 10px 0;/*relleno de espacio*/
+
+    display: none;
+}
+.links_items_footer{
+    list-style: none;
+    display: flex;/*nos permite alterar el tipo de caja con que se muestra un elemento.*/
+}
+.links_items_footer li{
+    margin: 0px 15px;/* margen isquierdo(left) derecho(right) */
+}
+.links_items_footer li a{
+    text-decoration: none;
+    transition: .3s ease;
+
+    color: var(--text-color-2);
+}
+.links_items_footer li a:hover{/*cuando el elemento este ensima le decimos que cambie de color*/
+    color: var(--color-1);
+}
+.links_items_footer li a svg{
+    width: 35px;
+    height: 35px;
+}
+.text_footer_author{
+    padding: 15px 0;
+    transition: .3s ease;
+
+    color: var(--text-color-2);
+}
+.text_footer_author:hover{
+    color: var(--color-1);
+}

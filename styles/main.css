@@ -1,0 +1,217 @@
+/* CSS DEL MAIN */
+#main{
+    width: 100%;
+    max-width: 1600px;
+    padding: 0px 250px;
+    margin: 0 auto;
+}
+#presentation{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.greeting_profile{
+    color: var(--color-1);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.name_profile{
+    text-transform: capitalize;
+    margin: 10px 0px 20px 0px;
+    color: var(--text-color-1);
+}
+.name_profile h1{ font-size: clamp(40px, 8vw, 100px);}
+
+.description_profile{
+    width: 90%;
+    font-size: 1.1rem;
+    color: var(--text-color-2);
+}
+.container_section{ font-size: 1.1rem;}
+
+/* SECTION ACERCA DE */
+#acercaDe{ padding: 100px 0px; }
+.container_title_section{
+    padding-bottom: 15px;
+    color: var(--text-color-1);
+}
+.text_title_section{
+    text-transform: capitalize;
+    font-size: 1.5em;
+    counter-increment: section 1;
+}
+.text_title_section::before{
+    content: "0" counter(section) ". ";
+    color: var(--color-1);
+    margin-right: 5px;
+}
+.text_title_section::after{
+    content: "";
+    width: 250px;
+    height: 2px;
+    display: inline-block;
+    background-color: var(--color-1);
+    position: relative;
+    left: 10px;
+    bottom: 6px;
+}
+.container_description_section{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    color: var(--text-color-2);
+    line-height: var(--height-text);
+}
+
+.img_effect{
+    width: 250px;
+    height: 450px;/*altura del margen de efecto*/
+    position: relative;
+    margin: 0 auto;
+}
+.img_effect::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: var(--color-2);
+    border-radius: var(--border-radius-1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .3s ease;
+}
+.img_effect::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 2px solid var(--color-1);
+    border-radius: var(--border-radius-1);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: -1;
+    transition: .3s ease;
+}
+.img_effect:hover::before{
+    background-color: transparent;
+}
+.img_effect:hover::after{
+    left: 5px;
+    top: 5px;
+    background-color: var(--color-2);
+}
+.img_effect img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    
+    border-radius: var(--border-radius-1);
+}
+
+.text_section p{
+    margin-bottom: 10px;
+}
+.text_section ul{
+    list-style: none;
+    margin: 5px 0px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#acercaDe .text_section ul li::before{
+    content: "▹";
+    color: var(--color-1);
+    margin-left: 3px;
+}
+
+
+/* section más proyectos */
+.container_subtitle_cards{
+    width: 100%;
+    margin: 50px 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-1);
+}
+.container_cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.proyect_card{
+    height: 280px;
+    padding: 20px;
+    border: 1px solid var(--color-1);
+    border-radius: var(--border-radius-1);
+    position: relative;
+    transition: .3s ease;
+    color: var(--text-color-2);
+}
+.proyect_card:hover{
+    background-color: var(--color-4);
+    transform: translateY(-5px);
+}
+
+.container_top_icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.folder{
+    width: 60px;
+    height: 60px;
+    color: var(--color-1);
+}
+.card_name{
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    transition: .3s ease;
+}
+.card_details{
+    font-size: 1rem;
+}
+.proyect_card:hover .card_name{
+    color: var(--color-1);
+} 
+.card_programings{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.card_programings ul{
+    list-style: none;
+    display: flex;
+}
+.card_programings ul li{
+    margin: 0 5px;
+    letter-spacing: 0.1em;
+    font-size: .7rem;
+}
+
+/* SECTION CONTACTOS */
+#contactos{
+    padding: 150px 0;
+    text-align: center;
+}
+
+#contactos .text_title_section::after{
+    display: none;
+}
+#contactos .container_description_section{
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+    line-height: var(--height-text);
+}
+.gif_animado{
+    width: 250px;
+}
+
